@@ -3,21 +3,13 @@
 
 int main(int argc, char *argv[])
 {
+    int i =300;//300:좀큰값.2byte필요.->300-256->44가나온다.. 
     
-    int i = 10;
-    char c = 'a';
+    int*pi = &i;//4byte
+    char *pc = &i;//1byte
     
-    int *iptr;
-    char *cptr;
-    int *iptr2;
+    printf("%i, %i, %i\n", i, *pi, *pc);
     
-    iptr = &i;
-    cptr = &c;
-    iptr2 = iptr;
-    
-    printf("i: %p\n%p (size:%i)\n", iptr, &i, sizeof(iptr));
-    printf("c: %p\n%p (size:%i)\n", cptr, &c, sizeof(cptr));
-    printf("iptr2 : %p, %i\n", iptr2, *iptr2);
     
     system("PAUSE");	
     return 0;
