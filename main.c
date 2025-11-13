@@ -1,15 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+void swap(int *x, int *y)
+{
+     int temp;   
+     temp = *x;
+     *x=*y;
+     *y = temp;
+     
+}
+
 int main(int argc, char *argv[])
 {
-    int i =300;//300:좀큰값.2byte필요.->300-256->44가나온다.. 
+    int a=3, b=5;
+    swap(&a,&b);
     
-    int*pi = &i;//4byte
-    char *pc = &i;//1byte
-    
-    printf("%i, %i, %i\n", i, *pi, *pc);
-    
+    printf("a:%i, b: %i\n", a, b);
     
     system("PAUSE");	
     return 0;
